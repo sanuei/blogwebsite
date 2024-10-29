@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>文章 - 个人创意空间</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/articles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <!-- 导航栏 -->
@@ -29,41 +29,68 @@
 
     <main class="articles-page">
         <header class="page-header">
-            <h1>文章</h1>
+            <h1>文章专栏</h1>
         </header>
         
-        <div class="articles-container">
-            <article class="article-card slide-in">
-                <div class="article-meta">
-                    <time>2024-03-20</time>
-                    <span class="category">设计</span>
-                </div>
-                <h2>设计中的留白艺术</h2>
-                <p class="excerpt">探讨如何运用留白提升设计的表现力，让设计更具美感和张力。通过实例分析，深入理解留白的艺术价值。</p>
-                <a href="article-detail.html" class="read-more">阅读全文</a>
-            </article>
+        <div class="articles-gallery">
+            <!-- 文章卡片 1 -->
+            <div class="article-item slide-in">
+                <a href="article-detail.html?id=1" class="article-link">
+                    <div class="article-card">
+                        <div class="article-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80" alt="创意思维">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-category">创意</div>
+                            <h3 class="article-title">探索创意思维的无限可能</h3>
+                            <p class="article-excerpt">在这个快速变化的世界中，创意思维已经成为一个不可或缺的能力...</p>
+                            <div class="article-meta">
+                                <span class="article-date">2024-03-15</span>
+                                <span class="article-read-time">阅读时间：5分钟</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
 
-            <article class="article-card slide-in">
-                <div class="article-meta">
-                    <time>2024-03-18</time>
-                    <span class="category">摄影</span>
+            <!-- 文章卡片 2 -->
+            <div class="article-item slide-in">
+                <div class="article-card">
+                    <div class="article-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1516542076529-1ea3854896f2?w=800&q=80" alt="技术创新">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-category">技术</div>
+                        <h3 class="article-title">未来科技与艺术的完美融合</h3>
+                        <p class="article-excerpt">科技与艺术的边界正在逐渐模糊，创新正在以前所未有的方式改变着我们的生活...</p>
+                        <div class="article-meta">
+                            <span class="article-date">2024-03-12</span>
+                            <span class="article-read-time">阅读时间：7分钟</span>
+                        </div>
+                    </div>
                 </div>
-                <h2>光与影的对话</h2>
-                <p class="excerpt">摄影不仅是记录瞬间，更是捕捉光影交织的艺术。本文将分享如何在摄影中运用光影创造意境。</p>
-                <a href="article-detail.html" class="read-more">阅读全文</a>
-            </article>
+            </div>
 
-            <article class="article-card slide-in">
-                <div class="article-meta">
-                    <time>2024-03-15</time>
-                    <span class="category">创意</span>
+            <!-- 文章卡片 3 -->
+            <div class="article-item slide-in">
+                <div class="article-card">
+                    <div class="article-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80" alt="设计思维">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-category">设计</div>
+                        <h3 class="article-title">设计思维：从概念到现实</h3>
+                        <p class="article-excerpt">优秀的设计不仅仅是表面的美感，更是深层次的问题解决能力...</p>
+                        <div class="article-meta">
+                            <span class="article-date">2024-03-10</span>
+                            <span class="article-read-time">阅读时间：6分钟</span>
+                        </div>
+                    </div>
                 </div>
-                <h2>创意思维的培养</h2>
-                <p class="excerpt">如何打破思维定式，培养创造性思维？本文将为你揭示创意思维的奥秘。</p>
-                <a href="article-detail.html" class="read-more">阅读全文</a>
-            </article>
+            </div>
         </div>
 
+        <!-- 分页 -->
         <div class="pagination">
             <a href="#" class="page-link active">1</a>
             <a href="#" class="page-link">2</a>
@@ -74,32 +101,6 @@
         </div>
     </main>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>关于我们</h3>
-                <p>CREATIVE SPACE 是一个致力于分享创意和艺术的个人空间，期待与您一起探索创意的无限可能。</p>
-            </div>
-            <div class="footer-section">
-                <h3>联系方式</h3>
-                <p>邮箱：contact@creativespace.com</p>
-                <p>电话：+86 123 4567 8900</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-weixin"></i></a>
-                    <a href="#"><i class="fab fa-weibo"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h3>快速链接</h3>
-                <p><a href="articles.html">文章</a></p>
-                <p><a href="photography.html">摄影</a></p>
-                <p><a href="videos.html">视频</a></p>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>&copy; 2024 CREATIVE SPACE. All rights reserved.</p>
-        </div>
-    </footer>
+    <script src="js/pagination.js"></script>
 </body>
 </html> 

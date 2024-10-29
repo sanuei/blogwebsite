@@ -3,65 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>管理后台 - CREATIVE SPACE</title>
+    <title>管理后台 - SONIC SPACE</title>
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/admin.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
-    <nav class="main-nav">
-        <div class="nav-container">
-            <div class="logo"><a href="../index.html">SONIC SPACE</a></div>
-            <ul class="nav-links">
-                <li><a href="../articles.html">文章</a></li>
-                <li><a href="../photography.html">摄影</a></li>
-                <li><a href="../videos.html">视频</a></li>
-                <li><a href="#" id="logoutBtn" class="logout-icon" title="退出登录">
-                    <i class="fas fa-sign-out-alt"></i>
-                </a></li>
-            </ul>
+<body class="admin-body">
+    <!-- 侧边栏 -->
+    <aside class="admin-sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <a href="../index.html">SONIC SPACE</a>
+            </div>
         </div>
-    </nav>
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="active">
+                    <a href="dashboard.html">
+                        <i class="fas fa-home"></i>
+                        <span>控制台</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="articles.html">
+                        <i class="fas fa-newspaper"></i>
+                        <span>文章管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="photos.html">
+                        <i class="fas fa-camera"></i>
+                        <span>摄影管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="videos.html">
+                        <i class="fas fa-video"></i>
+                        <span>视频管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html">
+                        <i class="fas fa-cog"></i>
+                        <span>系统设置</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
 
-    <main class="admin-dashboard">
-        <h1>管理后台</h1>
+    <!-- 主要内容区域 -->
+    <main class="admin-main">
+        <!-- 顶部导航栏 -->
+        <header class="admin-header">
+            <div class="header-search">
+                <input type="search" placeholder="搜索...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="header-tools">
+                <button class="notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </button>
+                <div class="admin-profile">
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&q=80" alt="管理员头像">
+                    <span>管理员</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- 仪表盘内容 -->
         <div class="dashboard-content">
-            <div class="admin-card">
-                <h2>文章管理</h2>
-                <button class="admin-button">新建文章</button>
-                <button class="admin-button">管理文章</button>
+            <!-- 数据概览卡片 -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #e3f2fd;">
+                        <i class="fas fa-newspaper" style="color: #1976d2;"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>文章总数</h3>
+                        <p class="stat-number">24</p>
+                        <span class="stat-trend positive">
+                            <i class="fas fa-arrow-up"></i> 12%
+                        </span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #fbe9e7;">
+                        <i class="fas fa-camera" style="color: #d84315;"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>摄影作品</h3>
+                        <p class="stat-number">156</p>
+                        <span class="stat-trend positive">
+                            <i class="fas fa-arrow-up"></i> 8%
+                        </span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #f3e5f5;">
+                        <i class="fas fa-video" style="color: #7b1fa2;"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>视频作品</h3>
+                        <p class="stat-number">32</p>
+                        <span class="stat-trend positive">
+                            <i class="fas fa-arrow-up"></i> 15%
+                        </span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #e8f5e9;">
+                        <i class="fas fa-users" style="color: #2e7d32;"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>访问人数</h3>
+                        <p class="stat-number">2,451</p>
+                        <span class="stat-trend positive">
+                            <i class="fas fa-arrow-up"></i> 23%
+                        </span>
+                    </div>
+                </div>
             </div>
-            <div class="admin-card">
-                <h2>摄影管理</h2>
-                <button class="admin-button">上传照片</button>
-                <button class="admin-button">管理相册</button>
-            </div>
-            <div class="admin-card">
-                <h2>视频管理</h2>
-                <button class="admin-button">添加视频</button>
-                <button class="admin-button">管理视频</button>
+
+            <!-- 最近活动和快速操作 -->
+            <div class="dashboard-grid">
+                <!-- 最近活动 -->
+                <div class="dashboard-card recent-activities">
+                    <h2>最近活动</h2>
+                    <ul class="activity-list">
+                        <li>
+                            <div class="activity-icon">
+                                <i class="fas fa-plus-circle"></i>
+                            </div>
+                            <div class="activity-details">
+                                <p>发布了新文章《探索创意思维的无限可能》</p>
+                                <span>2分钟前</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="activity-icon">
+                                <i class="fas fa-edit"></i>
+                            </div>
+                            <div class="activity-details">
+                                <p>更新了摄影作品集《城市印象》</p>
+                                <span>1小时前</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="activity-icon">
+                                <i class="fas fa-upload"></i>
+                            </div>
+                            <div class="activity-details">
+                                <p>上传了新视频《街头文化》</p>
+                                <span>3小时前</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 快速操作 -->
+                <div class="dashboard-card quick-actions">
+                    <h2>快速操作</h2>
+                    <div class="action-buttons">
+                        <button class="action-btn">
+                            <i class="fas fa-plus"></i>
+                            新建文章
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-upload"></i>
+                            上传图片
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-video"></i>
+                            添加视频
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-cog"></i>
+                            系统设置
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
-
-    <script>
-        // 退出登录功能
-        document.getElementById('logoutBtn').addEventListener('click', function(e) {
-            e.preventDefault();
-            localStorage.removeItem('isLoggedIn');
-            window.location.href = '../login.html';
-        });
-
-        // 检查登录状态
-        function checkAuth() {
-            if (localStorage.getItem('isLoggedIn') !== 'true') {
-                window.location.href = '../login.html';
-            }
-        }
-
-        // 页面加载时检查登录状态
-        checkAuth();
-    </script>
 </body>
 </html> 

@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>设计中的留白艺术 - 个人创意空间</title>
+    <title>文章详情 - 个人创意空间</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/article-detail.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+    <!-- 导航栏 -->
     <nav class="main-nav">
         <div class="nav-container">
-            <div class="logo"><a href="index.html">CREATIVE SPACE</a></div>
+            <div class="logo"><a href="index.html">SONIC SPACE</a></div>
             <ul class="nav-links">
                 <li><a href="articles.html">文章</a></li>
                 <li><a href="photography.html">摄影</a></li>
@@ -22,20 +25,50 @@
         </div>
     </nav>
 
-    <main class="article-detail">
-        <article>
+    <main class="article-detail-page">
+        <article class="article-content">
             <header class="article-header">
-                <h1>设计中的留白艺术</h1>
                 <div class="article-meta">
-                    <time>2024-03-20</time>
-                    <span class="category">设计</span>
+                    <span class="article-category">创意</span>
+                    <span class="article-date">2024-03-15</span>
+                </div>
+                <h1 class="article-title">探索创意思维的无限可能</h1>
+                <div class="article-info">
+                    <span class="read-time">阅读时间：5分钟</span>
+                    <div class="share-buttons">
+                        <button class="share-button"><i class="fab fa-twitter"></i></button>
+                        <button class="share-button"><i class="fab fa-facebook"></i></button>
+                        <button class="share-button"><i class="fab fa-linkedin"></i></button>
+                    </div>
                 </div>
             </header>
-            
-            <div class="article-content">
-                <p>在设计领域中，留白不仅仅是空白的区域，更是一种强大的视觉语言...</p>
-                <!-- 文章内容 -->
+
+            <div class="article-body">
+                <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&q=80" alt="创意思维" class="article-main-image">
+                <div class="article-text">
+                    <!-- 文章内容 -->
+                    <p>在这个快速变化的世界中，创意思维已经成为一个不可或缺的能力...</p>
+                    <!-- 更多段落 -->
+                </div>
             </div>
+
+            <footer class="article-footer">
+                <div class="article-tags">
+                    <span class="tag">#创意</span>
+                    <span class="tag">#思维</span>
+                    <span class="tag">#创新</span>
+                </div>
+                <div class="article-navigation">
+                    <a href="#" class="prev-article">
+                        <i class="fas fa-arrow-left"></i>
+                        上一篇：设计思维的力量
+                    </a>
+                    <a href="#" class="next-article">
+                        下一篇：创新与传统的碰撞
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </footer>
         </article>
     </main>
 </body>
