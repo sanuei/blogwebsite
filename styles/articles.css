@@ -1,19 +1,23 @@
+/* 文章列表页面 - 设置顶部间距避免被导航栏遮挡 */
 .articles-page {
     padding-top: 80px;
 }
 
+/* 页面标题区块 - 使用主题色背景 */
 .page-header {
     text-align: center;
     padding: 4rem 0;
     background-color: var(--primary-color);
 }
 
+/* 文章列表容器 - 限制最大宽度并居中显示 */
 .articles-container {
     max-width: 800px;
     margin: 0 auto;
     padding: var(--spacing);
 }
 
+/* 文章卡片样式 - 添加阴影和圆角效果 */
 .article-card {
     margin-bottom: 3rem;
     padding: 2rem;
@@ -22,15 +26,62 @@
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
+/* 文章元信息 - 作者、日期等信息的样式 */
 .article-meta {
     font-size: 0.9rem;
     color: #666;
     margin-bottom: 1rem;
 }
 
+/* "阅读更多"链接样式 */
 .read-more {
     display: inline-block;
     margin-top: 1rem;
     color: var(--accent-color);
     text-decoration: none;
+}
+
+/* 移动端导航栏适配 */
+@media (max-width: 768px) {
+    /* 导航容器改为垂直布局 */
+    .main-nav .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 导航链接列表样式调整 */
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0;
+        flex-wrap: nowrap;     /* 防止链接换行 */
+        overflow-x: auto;      /* 超出部分可横向滚动 */
+    }
+
+    /* 导航链接间距调整 */
+    .nav-links li {
+        margin: 0 10px;
+        white-space: nowrap;   /* 确保链接文字不换行 */
+    }
+}
+
+/* 移动端文章内容适配 */
+@media (max-width: 768px) {
+    /* 调整文章容器内边距 */
+    .article-container {
+        padding: 1rem;
+    }
+
+    /* 移动端标题样式调整 */
+    .article-title {
+        font-size: 1.5rem;     /* 减小标题字号 */
+        text-align: center;     /* 标题居中显示 */
+    }
+
+    /* 移动端文章内容样式调整 */
+    .article-content {
+        font-size: 1rem;       /* 正文字号调整 */
+        line-height: 1.6;      /* 增加行高提高可读性 */
+    }
 } 

@@ -100,14 +100,28 @@
             <!-- 快速链接部分 -->
             <div class="footer-section">
                 <h3>快速链接</h3>
-                <p><a href="articles.html">文章</a></p>
-                <p><a href="photography.html">摄影</a></p>
-                <p><a href="videos.html">视频</a></p>
+                <div class="quick-links">
+                    <p><a href="articles.html">文章</a></p>
+                    <p><a href="photography.html">摄影</a></p>
+                    <p><a href="videos.html">视频</a></p>
+                </div>
+                <style>
+                    @media (max-width: 768px) {
+                        .quick-links {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-around;
+                        }
+                        .quick-links p {
+                            margin: 0 10px;
+                        }
+                    }
+                </style>
             </div>
         </div>
         <!-- 版权信息 -->
         <div class="copyright">
-            <p>&copy; 2024 CREATIVE SPACE. All rights reserved.</p>
+            <p>&copy; 2024 SONIC SPACE. All rights reserved.</p>
         </div>
     </footer>
 

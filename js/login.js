@@ -1,30 +1,35 @@
-document.getElementById('loginForm').addEventListener('submit', async (e) => {
+// àÔ?ÅĞ?Ñß¿ø
+const DEFAULT_CREDENTIALS = {
+    username: 'admin',
+    password: 'admin123'
+};
+
+// ÅĞ?É½?Äó¸ò?Íı
+document.getElementById('loginForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     
-    try {
-        // è¿™é‡Œåº”è¯¥è¿æ¥åˆ°å®é™…çš„åç«¯API
-        const response = await fetch('/api/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ username, password }),
-        });
-        
-        if (response.ok) {
-            const data = await response.json();
-            // ä¿å­˜ç™»å½•token
-            localStorage.setItem('authToken', data.token);
-            // è·³è½¬åˆ°ç®¡ç†åå°
-            window.location.href = '/admin/dashboard.html';
-        } else {
-            alert('ç™»å½•å¤±è´¥ï¼Œè¯·æ£€æŸ¥ç”¨æˆ·åå’Œå¯†ç ');
-        }
-    } catch (error) {
-        console.error('ç™»å½•é”™è¯¯:', error);
-        alert('ç™»å½•è¿‡ç¨‹ä¸­å‡ºç°é”™è¯¯');
+    // ??ÅĞ?Ñß¿ø
+    if (username === DEFAULT_CREDENTIALS.username && 
+        password === DEFAULT_CREDENTIALS.password) {
+        // ÅĞ?À®¸ù
+        localStorage.setItem('isLoggedIn', 'true');
+        window.location.href = 'admin/dashboard.html'; // ½ÅÄê¸şÅş´ÉÍı¹¡Âæ
+    } else {
+        // ÅĞ?¼º?
+        alert('ÍÑ?Ì¾°¿Ì©???¡ª');
     }
-}); 
+});
+
+// ??ÅĞ?¾õ?
+function checkLoginStatus() {
+    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    if (isLoggedIn && window.location.href.includes('login.html')) {
+        window.location.href = 'admin/dashboard.html';
+    }
+}
+
+// ?ÌÌ²Ã????ÅĞ?¾õ?
+checkLoginStatus(); 

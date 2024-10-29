@@ -3,54 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>管理后台 - 个人创意空间</title>
+    <title>管理后台 - CREATIVE SPACE</title>
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <nav class="admin-nav">
+    <nav class="main-nav">
         <div class="nav-container">
-            <div class="logo">管理后台</div>
-            <button id="logoutBtn" class="logout-button">退出登录</button>
+            <div class="logo"><a href="../index.html">SONIC SPACE</a></div>
+            <ul class="nav-links">
+                <li><a href="../articles.html">文章</a></li>
+                <li><a href="../photography.html">摄影</a></li>
+                <li><a href="../videos.html">视频</a></li>
+                <li><a href="#" id="logoutBtn" class="logout-icon" title="退出登录">
+                    <i class="fas fa-sign-out-alt"></i>
+                </a></li>
+            </ul>
         </div>
     </nav>
 
-    <div class="admin-layout">
-        <aside class="admin-sidebar">
-            <ul class="admin-menu">
-                <li><a href="#" data-section="articles">文章管理</a></li>
-                <li><a href="#" data-section="photos">摄影作品管理</a></li>
-                <li><a href="#" data-section="videos">视频管理</a></li>
-            </ul>
-        </aside>
-
-        <main class="admin-content">
-            <section id="articles" class="content-section">
+    <main class="admin-dashboard">
+        <h1>管理后台</h1>
+        <div class="dashboard-content">
+            <div class="admin-card">
                 <h2>文章管理</h2>
-                <button class="add-button">添加新文章</button>
-                <div class="item-list">
-                    <!-- 文章列表 -->
-                </div>
-            </section>
-
-            <section id="photos" class="content-section" style="display: none;">
-                <h2>摄影作品管理</h2>
-                <button class="add-button">添加新作品</button>
-                <div class="item-list">
-                    <!-- 摄影作品列表 -->
-                </div>
-            </section>
-
-            <section id="videos" class="content-section" style="display: none;">
+                <button class="admin-button">新建文章</button>
+                <button class="admin-button">管理文章</button>
+            </div>
+            <div class="admin-card">
+                <h2>摄影管理</h2>
+                <button class="admin-button">上传照片</button>
+                <button class="admin-button">管理相册</button>
+            </div>
+            <div class="admin-card">
                 <h2>视频管理</h2>
-                <button class="add-button">添加新视频</button>
-                <div class="item-list">
-                    <!-- 视频列表 -->
-                </div>
-            </section>
-        </main>
-    </div>
+                <button class="admin-button">添加视频</button>
+                <button class="admin-button">管理视频</button>
+            </div>
+        </div>
+    </main>
 
-    <script src="../js/admin.js"></script>
+    <script>
+        // 退出登录功能
+        document.getElementById('logoutBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            localStorage.removeItem('isLoggedIn');
+            window.location.href = '../login.html';
+        });
+
+        // 检查登录状态
+        function checkAuth() {
+            if (localStorage.getItem('isLoggedIn') !== 'true') {
+                window.location.href = '../login.html';
+            }
+        }
+
+        // 页面加载时检查登录状态
+        checkAuth();
+    </script>
 </body>
 </html> 

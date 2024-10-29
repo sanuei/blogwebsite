@@ -1,24 +1,24 @@
-/* 摄影页面的主容器样式 */
+/* 摄影页面主容器 */
 .photography-page {
     padding-top: 80px;
     min-height: 100vh;
     background-color: var(--primary-color);
 }
 
-/* 页面标题区域样式 */
+/* 页面标题区域 */
 .page-header {
     text-align: center;
     padding: 4rem 0 2rem;
     margin-bottom: 2rem;
 }
 
-/* 页面主标题文字样式 */
+/* 页面主标题文字 */
 .page-header h1 {
     font-size: 2.5rem;
     color: var(--text-color);
 }
 
-/* 照片网格布局容器 */
+/* 照片画廊 */
 .photo-gallery {
     max-width: 1200px;
     margin: 0 auto;
@@ -29,12 +29,12 @@
     padding: var(--spacing);
 }
 
-/* 隐藏第10张及以后的照片 */
+/* 限制显示前10张照片 */
 .photo-item:nth-child(n+10) {
     display: none;
 }
 
-/* 响应式布局断点 */
+/* 响应式布局 */
 @media (max-width: 1200px) {
     .photo-gallery {
         grid-template-columns: repeat(3, 1fr);
@@ -53,7 +53,7 @@
     }
 }
 
-/* 单个照片项目的容器样式 */
+/* 照片项目容器 */
 .photo-item {
     position: relative;
     overflow: hidden;
@@ -81,7 +81,7 @@
     transform: scale(1.05);
 }
 
-/* 照片信息覆盖层样式 */
+/* 照片信息覆盖层 */
 .photo-info {
     position: absolute;
     bottom: 0;
@@ -99,14 +99,39 @@
     opacity: 1;
 }
 
-/* 照片标题样式 */
+/* 照片标题 */
 .photo-info h3 {
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
 }
 
-/* 照片描述文字样式 */
+/* 照片描述文字 */
 .photo-info p {
     font-size: 0.9rem;
     opacity: 0.9;
 } 
+
+/* 移动端导航栏适配 */
+@media (max-width: 768px) {
+    /* 导航容器改为垂直布局 */
+    .main-nav .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 导航链接列表样式调整 */
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0;
+        flex-wrap: nowrap;     /* 防止链接换行 */
+        overflow-x: auto;      /* 超出部分可横向滚动 */
+    }
+
+    /* 导航链接间距调整 */
+    .nav-links li {
+        margin: 0 10px;
+        white-space: nowrap;   /* 确保链接文字不换行 */
+    }
+}

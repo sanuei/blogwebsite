@@ -51,7 +51,7 @@
 
 .video-thumbnail {
     position: relative;
-    padding-top: 56.25%; /* 16:9 比例 */
+    padding-top: 56.25%; /* 16:9 罸箴 */
     background: #f0f0f0;
 }
 
@@ -113,7 +113,7 @@
 
 .video-embed {
     position: relative;
-    padding-top: 56.25%; /* 16:9 比例 */
+    padding-top: 56.25%; /* 16:9 罸箴 */
     background: #f0f0f0;
     overflow: hidden;
 }
@@ -129,4 +129,43 @@
 
 .video-item:nth-child(n+7) {
     display: none;
+}
+
+/* 确保导航栏在移动端的显示效果 */
+@media (max-width: 768px) {
+    .main-nav .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0;
+        flex-wrap: nowrap; /* 确保链接不换行 */
+        overflow-x: auto; /* 允许水平滚动 */
+    }
+
+    .nav-links li {
+        margin: 0 10px;
+        white-space: nowrap; /* 确保文字不换行 */
+    }
+}
+
+/* 优化视频内容在移动端的显示 */
+@media (max-width: 768px) {
+    .videos-container {
+        padding: 1rem; /* 增加内边距 */
+    }
+
+    .video-title {
+        font-size: 1.5rem; /* 调整标题字体大小 */
+        text-align: center; /* 居中对齐 */
+    }
+
+    .video-content {
+        font-size: 1rem; /* 调整内容字体大小 */
+        line-height: 1.6; /* 增加行高 */
+    }
 } 

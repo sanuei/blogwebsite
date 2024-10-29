@@ -1,24 +1,16 @@
-/* 全局变量定义 */
+﻿/* 全局变量设置 */
 :root {
-    --primary-color: #f8f9fa;    /* 主要背景色 */
+    --primary-color: #f8f9fa;    /* 主背景颜色 */
     --text-color: #2c3e50;       /* 文字颜色 */
     --accent-color: #34495e;     /* 强调色 */
-    --spacing: 2rem;             /* 通用间距 */
+    --spacing: 2rem;             /* 间距单位 */
 }
 
-/* 重置默认样式 */
+/* 全局基础样式 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* 基础页面样式 */
-body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--primary-color);
 }
 
 /* 导航栏样式 */
@@ -30,22 +22,28 @@ body {
     z-index: 1000;              /* 确保导航栏始终在顶层 */
 }
 
-/* 导航容器 */
+/* 导航栏容器 */
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 var(--spacing);
+    padding: 1rem var(--spacing);
 }
 
 /* 导航链接列表 */
 .nav-links {
     display: flex;
     list-style: none;
-    align-items: center;
     gap: 3rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
 /* 导航链接样式 */
@@ -56,7 +54,9 @@ body {
     font-weight: 500;
     font-size: 1.1rem;
     transition: color 0.3s ease;
-    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 /* 导航链接悬停效果 */
@@ -71,9 +71,10 @@ body {
     transition: color 0.3s ease;
     display: flex;
     align-items: center;
+    height: 100%;
 }
 
-/* 首页大横幅区域 */
+/* 首页大横幅 */
 .hero {
     height: 100vh;
     display: flex;
@@ -89,16 +90,10 @@ body {
     margin: 0 auto;
 }
 
-/* 动画效果类 */
+/* 动画效果 */
 .fade-in {
     opacity: 0;
     animation: fadeIn 1s ease forwards;
-}
-
-.slide-in {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: slideIn 0.8s ease forwards;
 }
 
 /* 淡入动画 */
@@ -126,7 +121,7 @@ body {
     margin-top: var(--spacing);
 }
 
-/* Logo样式 */
+/* Logo桁 */
 .logo a {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.8rem;
@@ -140,12 +135,12 @@ body {
     transition: opacity 0.3s ease;
 }
 
-/* Logo悬停效果 */
+/* Logo */
 .logo a:hover {
     opacity: 0.8;
 }
 
-/* 导航链接最后一项样式 */
+/* 絲取丈･筝蕁号桁 */
 .nav-links li:last-child {
     margin-left: 0;
 }
@@ -157,7 +152,7 @@ body {
     padding: 3rem 0;
 }
 
-/* 页脚内容布局 */
+/* 页脚内容网格 */
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -174,29 +169,11 @@ body {
     font-size: 1.2rem;
 }
 
-/* 页脚文本和链接样式 */
-.footer-section p,
-.footer-section a {
-    color: rgba(255, 255, 255, 0.8);
-    line-height: 1.8;
-    text-decoration: none;
-}
-
-/* 页脚链接悬停效果 */
-.footer-section a:hover {
-    color: white;
-}
-
 /* 社交媒体链接容器 */
 .social-links {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
-}
-
-/* 社交媒体图标 */
-.social-links a {
-    font-size: 1.5rem;
 }
 
 /* 版权信息 */
@@ -208,7 +185,7 @@ body {
     margin-top: 2rem;
 }
 
-/* 分页导航样式 */
+/* 分页导航容器 */
 .pagination {
     display: flex;
     justify-content: center;
@@ -245,7 +222,29 @@ body {
     color: white;
 }
 
-/* 下一页按钮样式 */
+/* 筝筝蕁究桁 */
 .page-link.next {
     font-size: 0.9rem;
+}
+
+/* 移动端样式 */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding: 0.5rem 0;
+        height: 40px;
+    }
+
+    .nav-links li {
+        margin: 0 10px;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-links a {
+        padding: 0.5rem 0;
+    }
 }
