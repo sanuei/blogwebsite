@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理后台 - 个人创意空间</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+</head>
+<body>
+    <nav class="admin-nav">
+        <div class="nav-container">
+            <div class="logo">管理后台</div>
+            <button id="logoutBtn" class="logout-button">退出登录</button>
+        </div>
+    </nav>
+
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <ul class="admin-menu">
+                <li><a href="#" data-section="articles">文章管理</a></li>
+                <li><a href="#" data-section="photos">摄影作品管理</a></li>
+                <li><a href="#" data-section="videos">视频管理</a></li>
+            </ul>
+        </aside>
+
+        <main class="admin-content">
+            <section id="articles" class="content-section">
+                <h2>文章管理</h2>
+                <button class="add-button">添加新文章</button>
+                <div class="item-list">
+                    <!-- 文章列表 -->
+                </div>
+            </section>
+
+            <section id="photos" class="content-section" style="display: none;">
+                <h2>摄影作品管理</h2>
+                <button class="add-button">添加新作品</button>
+                <div class="item-list">
+                    <!-- 摄影作品列表 -->
+                </div>
+            </section>
+
+            <section id="videos" class="content-section" style="display: none;">
+                <h2>视频管理</h2>
+                <button class="add-button">添加新视频</button>
+                <div class="item-list">
+                    <!-- 视频列表 -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../js/admin.js"></script>
+</body>
+</html> 

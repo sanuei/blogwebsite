@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人创意空间</title>
+    <!-- 引入样式表 -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <!-- 引入 Montserrat 字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <!-- 引入 Font Awesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- 动态背景容器 -->
+    <div class="hero">
+        <div class="dynamic-bg">
+            <canvas id="gridCanvas"></canvas>
+        </div>
+        <h1 class="fade-in">探索创意的边界</h1>
+        <p class="subtitle fade-in">记录思考，分享创作</p>
+    </div>
+    
+    <!-- 导航栏 -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <!-- 网站Logo -->
+            <div class="logo"><a href="index.html">SONIC SPACE</a></div>
+            <!-- 导航链接 -->
+            <ul class="nav-links">
+                <li><a href="articles.html">文章</a></li>
+                <li><a href="photography.html">摄影</a></li>
+                <li><a href="videos.html">视频</a></li>
+                <li><a href="login.html" class="login-icon" title="管理员登录">
+                    <i class="fas fa-user-circle"></i>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <!-- 预览卡片区域 -->
+        <section class="previews-container">
+            <div class="previews">
+                <!-- 文章预览卡片 -->
+                <div class="preview-card slide-in">
+                    <div class="preview-icon">
+                        <i class="icon-article">📝</i>
+                    </div>
+                    <h2>文章</h2>
+                    <p>探索思维的深度</p>
+                    <a href="articles.html" class="preview-link">浏览全部文章</a>
+                </div>
+                
+                <!-- 摄影预览卡片 -->
+                <div class="preview-card slide-in">
+                    <div class="preview-icon">
+                        <i class="icon-photo">📷</i>
+                    </div>
+                    <h2>摄影</h2>
+                    <p>捕捉光影的瞬间</p>
+                    <a href="photography.html" class="preview-link">查看摄影作品</a>
+                </div>
+                
+                <!-- 视频预览卡片 -->
+                <div class="preview-card slide-in">
+                    <div class="preview-icon">
+                        <i class="icon-video">🎥</i>
+                    </div>
+                    <h2>视频</h2>
+                    <p>记录动态的生活</p>
+                    <a href="videos.html" class="preview-link">观看视频作品</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- 关于我们部分 -->
+            <div class="footer-section">
+                <h3>关于我们</h3>
+                <p>CREATIVE SPACE 是一个致力于分享创意和艺术的个人空间，期待与您一起探索创意的无限可能。</p>
+            </div>
+            <!-- 联系方式部分 -->
+            <div class="footer-section">
+                <h3>联系方式</h3>
+                <p>邮箱：sanuei.yann@gmail.com</p>
+                <p>电话：+81 123 4567 8900</p>
+                <!-- 社交媒体链接 -->
+                <div class="social-links">
+                    <a href="https://x.com/yngshngwi6" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/sonic_yann/" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UCKHt6fL8W-LYArC2bhFZi7g" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <!-- 快速链接部分 -->
+            <div class="footer-section">
+                <h3>快速链接</h3>
+                <p><a href="articles.html">文章</a></p>
+                <p><a href="photography.html">摄影</a></p>
+                <p><a href="videos.html">视频</a></p>
+            </div>
+        </div>
+        <!-- 版权信息 -->
+        <div class="copyright">
+            <p>&copy; 2024 CREATIVE SPACE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 引入JavaScript文件 -->
+    <script src="js/grid.js"></script>
+</body>
+</html> 
