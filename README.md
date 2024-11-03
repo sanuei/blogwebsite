@@ -24,14 +24,14 @@ CREATIVE SPACE 是一个现代简约风格的个人创意展示网站，专注�
 - Alpine.js (轻量级JavaScript框架)
 
 ## 项目结构 
-creative-space/
-├── index.html # 主页
-├── articles.html # 文章列表页
-├── article-detail.html # 文章详情页
-├── photography.html # 摄影作品页
-├── videos.html # 视频作品页
-├── login.html # 管理员登录页
-├── styles/
+- creative-space/
+- ├── index.html # 主页
+- ├── articles.html # 文章列表页
+- ├── article-detail.html # 文章详情页
+- ├── photography.html # 摄影作品页
+- ├── videos.html # 视频作品页
+- ├── login.html # 管理员登录页
+- ├── styles/
 │ ├── main.css # 主要样式
 │ ├── index.css # 首页样式
 │ ├── articles.css # 文章页样式
