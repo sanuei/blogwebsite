@@ -4,8 +4,9 @@
 CREATIVE SPACE 是一个现代简约风格的个人创意展示网站，专注于展示文章、摄影作品和视频内容。网站采用响应式设计，确保在各种设备上都能提供良好的浏览体验。
 
 ## 源代码
-- GitHub: https://github.com/sanuei/creative-space
-- 在线预览: https://sanuei.github.io/creative-space
+- GitHub: https://github.com/sanuei/sonic-space-personal-website
+- 在线预览: https://sanuei.github.io/sonic-space-personal-website/
+)
 
 ## 主要功能
 - 文章展示与阅读
